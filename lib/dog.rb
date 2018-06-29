@@ -44,7 +44,6 @@ class Dog
         id = result[0]
         name = result[1]
         breed = result[2]
-      end
     end
   end
   
