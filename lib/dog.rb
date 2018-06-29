@@ -41,6 +41,7 @@ class Dog
       WHERE name = ?
       SQL
       result = DB[:conn].execute(sql, name)
+      binding.pry
   end
   
   def save
