@@ -40,8 +40,12 @@ class Dog
       SELECT * FROM dogs 
       WHERE name = ?
       SQL
-      result = DB[:conn].execute(sql, name)
-      result
+      result = DB[:conn].execute(sql, name).map do
+        id = result[0]
+        name = result[1]
+        breed = result[2]
+      end
+    end
   end
   
   def save
