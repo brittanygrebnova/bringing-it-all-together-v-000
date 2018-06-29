@@ -58,9 +58,13 @@ class Dog
     self
   end
   
-  def self.create(name:, breed:)
-    dog = self.new(name: name, breed: breed)
+  def self.create(name, breed)
+    dog = self.new(name, breed)
     dog.save
+  end
+  
+  def self.find_by_id(id)
+    
   end
   
   def update
